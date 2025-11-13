@@ -1,0 +1,6 @@
+xarray        # Used to load and process the .nc (NetCDF) dataset containing structural forces
+numpy         # Used for numerical operations and array handling
+pandas        # Used to create verification tables and export data to CSV
+matplotlib    # Used for plotting 2D SFD/BMD and 3D visualizations (PyPlot)
+netCDF4       # Backend support for reading NetCDF files in xarray
+
