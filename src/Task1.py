@@ -21,7 +21,7 @@ for elem in central_elems:
 # Combine element start & end for plotting
 Mz_vals = [Mz_i[0]] + Mz_j
 Vy_vals = [Vy_i[0]] + Vy_j
-x_index = np.arange(len(Mz_vals))
+x_index = np.linspace(0, 25, len(Mz_vals))  # 25m span, 10 points
 
 #  Verification Table (for report)
 data = []

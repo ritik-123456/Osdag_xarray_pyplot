@@ -174,7 +174,9 @@ girder4 = make_girder(14)  # [14,29,...,82]
 girder5 = make_girder(13)  # [13,30,...,81]
 
 girders = [girder1, girder2, girder3, girder4, girder5]
+girders = girders[::-1]
 girder_labels = ["Girder 1", "Girder 2", "Girder 3 (central)", "Girder 4", "Girder 5"]
+
 
 
 # Choosing of the  plot variable: "Vy" or "Mz"
@@ -248,7 +250,8 @@ for gi, g in enumerate(girders):
 
     # scaled vertical heights for plotting
     ytop_scaled = ytop * scale
-
+    if plot_var == "Mz":
+        ytop_scaled = -ytop_scaled
     # draw base centerline (y=0)
     ax.plot(xs, np.zeros_like(xs), zs, color='k', linewidth=1, alpha=0.7, label='_nolegend_')
 
